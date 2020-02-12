@@ -112,3 +112,54 @@ const data = [
   Step 5: Add a new article to the array. Make sure it is in the same format as the others. Refresh the page to see the new article.
 
 */
+
+function createArticle(obj) {
+
+  // create elements
+  const article = document.createElement('div');
+  const artTitle = document.createElement('h2');
+  const dateP = document.createElement('p');
+
+  const p1 = document.createElement('p')
+  const p2 = document.createElement('p')
+  const p3 = document.createElement('p')
+
+  const spanButt = document.createElement('span')
+  
+  // assign elements structure
+  article.appendChild(artTitle);
+  article.appendChild(dateP);
+
+  article.appendChild(p1);
+  article.appendChild(p2);
+  article.appendChild(p3);
+
+  article.appendChild(spanButt);
+
+  // add classes to elements
+  article.classList.add('article');
+  dateP.classList.add('date')
+  spanButt.classList.add('expandButton');
+
+  // add content to elements
+  // title, date, firstParagraph~
+  artTitle.textContent = obj.title;
+  dateP.textContent = obj.date;
+  p1.textContent = obj.firstParagraph;
+  p2.textContent = obj.secondParagraph;
+  p3.textContent = obj.thirdParagraph;
+  spanButt.textContent = 'ーｅｘｐａｎｄー'
+
+  spanButt.addEventListener('click', e => {
+    console.log('butt was clicked', e.target)
+    article.classList.toggle('article-open');
+  })
+
+  return article;
+}
+
+const articlesDiv = document.querySelector('.articles');
+
+data.map(datum => {
+  articlesDiv.appendChild(createArticle(datum))
+})
