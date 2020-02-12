@@ -87,20 +87,31 @@ const data = [
           Hodor. Hodor, hodor, hodor. Hodor hodor... Hodor hodor hodor?! Hodor, hodor... Hodor hodor HODOR hodor, hodor hodor. Hodor.`
   },
   {
-    title: 'Professional Software Development in 2019',
-    date: 'Jan 1st, 2019',
-    firstParagraph: `Hodor hodor HODOR! Hodor hodor - hodor, hodor. Hodor hodor... Hodor hodor hodor; hodor hodor. Hodor hodor hodor, hodor, hodor
-          hodor. Hodor, hodor. Hodor. Hodor, hodor - hodor... Hodor hodor hodor; hodor HODOR hodor, hodor hodor?! Hodor hodor, hodor.
-          Hodor hodor hodor hodor hodor! Hodor hodor - HODOR hodor, hodor hodor hodor hodor hodor; hodor hodor? `,
+    title: 'Eu sou um gato',
+    date: 'Feb 10th, 2020',
+    firstParagraph: `Miau, bom dia.`,
 
-    secondParagraph: `Hodor, hodor. Hodor. Hodor, hodor, hodor. Hodor hodor, hodor. Hodor hodor, hodor, hodor hodor. Hodor! Hodor hodor, hodor;
-          hodor hodor hodor? Hodor, hodor. Hodor. Hodor, hodor - HODOR hodor, hodor hodor hodor! Hodor, hodor. Hodor. Hodor, HODOR
-          hodor, hodor hodor, hodor, hodor hodor. Hodor hodor - hodor - hodor... Hodor hodor hodor hodor hodor hodor hodor?! Hodor
-          hodor - hodor hodor hodor. Hodor. Hodor hodor... Hodor hodor hodor hodor hodor? `,
+    secondParagraph: `Eu tenho um queijo e uma laranja. Meu queijo é muy delicioso.`,
 
-    thirdParagraph: `Hodor hodor - hodor... Hodor hodor hodor hodor. Hodor. Hodor! Hodor hodor, hodor hodor hodor hodor hodor; hodor hodor? Hodor!
-          Hodor hodor, HODOR hodor, hodor hodor?! Hodor! Hodor hodor, HODOR hodor, hodor hodor, hodor, hodor hodor. Hodor, hodor.
-          Hodor. Hodor, hodor, hodor. Hodor hodor... Hodor hodor hodor?! Hodor, hodor... Hodor hodor HODOR hodor, hodor hodor. Hodor.`
+    thirdParagraph: `Eu não fala inglês... porque sou um gato.`
+  },
+  {
+    title: '한국어 문장',
+    date: 'Feb 11th, 2020',
+    firstParagraph: `안녕 하세요.`,
+
+    secondParagraph: `저는 한국어 너무 좋아해요. 한국어 말하면 정말 기뻐요. 님도 한국어를 공부하십시오.`,
+
+    thirdParagraph: `오랫동안 한국어 안 말했어요. 미안해요.`
+  },
+  {
+    title: '日本語での文章',
+    date: 'Feb 12th, 2020',
+    firstParagraph: `これは日本語の文字でございます。`,
+
+    secondParagraph: `東京に４年間住んでいました。東京に住んでいる間に、韓国にも何回か行きました。`,
+
+    thirdParagraph: `このオンライン学校が終わったらまた日本に引っ越すつもりなんです。よろしくお願いします。`
   }
 ];
 
