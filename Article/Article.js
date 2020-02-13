@@ -85,6 +85,33 @@ const data = [
     thirdParagraph: `Hodor hodor - hodor... Hodor hodor hodor hodor. Hodor. Hodor! Hodor hodor, hodor hodor hodor hodor hodor; hodor hodor? Hodor!
           Hodor hodor, HODOR hodor, hodor hodor?! Hodor! Hodor hodor, HODOR hodor, hodor hodor, hodor, hodor hodor. Hodor, hodor.
           Hodor. Hodor, hodor, hodor. Hodor hodor... Hodor hodor hodor?! Hodor, hodor... Hodor hodor HODOR hodor, hodor hodor. Hodor.`
+  },
+  {
+    title: 'Eu sou um gato',
+    date: 'Feb 10th, 2020',
+    firstParagraph: `Miau, bom dia.`,
+
+    secondParagraph: `Eu tenho um queijo e uma laranja. Meu queijo é muy delicioso.`,
+
+    thirdParagraph: `Eu não fala inglês... porque sou um gato.`
+  },
+  {
+    title: '한국어 문장',
+    date: 'Feb 11th, 2020',
+    firstParagraph: `안녕 하세요.`,
+
+    secondParagraph: `저는 한국어 너무 좋아해요. 한국어 말하면 정말 기뻐요. 님도 한국어를 공부하십시오.`,
+
+    thirdParagraph: `오랫동안 한국어 안 말했어요. 미안해요.`
+  },
+  {
+    title: '日本語での文章',
+    date: 'Feb 12th, 2020',
+    firstParagraph: `これは日本語の文字でございます。`,
+
+    secondParagraph: `東京に４年間住んでいました。東京に住んでいる間に、韓国にも何回か行きました。`,
+
+    thirdParagraph: `このオンライン学校が終わったらまた日本に引っ越すつもりなんです。よろしくお願いします。`
   }
 ];
 
@@ -112,3 +139,53 @@ const data = [
   Step 5: Add a new article to the array. Make sure it is in the same format as the others. Refresh the page to see the new article.
 
 */
+
+function createArticle(obj) {
+
+  // create elements
+  const article = document.createElement('div');
+  const artTitle = document.createElement('h2');
+  const dateP = document.createElement('p');
+
+  const p1 = document.createElement('p')
+  const p2 = document.createElement('p')
+  const p3 = document.createElement('p')
+
+  const spanButt = document.createElement('span')
+  
+  // assign elements structure
+  article.appendChild(artTitle);
+  article.appendChild(dateP);
+
+  article.appendChild(p1);
+  article.appendChild(p2);
+  article.appendChild(p3);
+
+  article.appendChild(spanButt);
+
+  // add classes to elements
+  article.classList.add('article');
+  dateP.classList.add('date')
+  spanButt.classList.add('expandButton');
+
+  // add content to elements
+  // title, date, firstParagraph~
+  artTitle.textContent = obj.title;
+  dateP.textContent = obj.date;
+  p1.textContent = obj.firstParagraph;
+  p2.textContent = obj.secondParagraph;
+  p3.textContent = obj.thirdParagraph;
+  spanButt.textContent = 'ーｅｘｐａｎｄー'
+
+  spanButt.addEventListener('click', e => {
+    article.classList.toggle('article-open');
+  })
+
+  return article;
+}
+
+const articlesDiv = document.querySelector('.articles');
+
+data.map(datum => {
+  articlesDiv.appendChild(createArticle(datum))
+})
